@@ -1,0 +1,70 @@
+{
+  "build": {
+    "beforeBuildCommand": "",
+    "beforeDevCommand": "",
+    "devPath": "../ui",
+    "distDir": "../ui"
+  },
+  "package": {
+    "productName": "Photo Sorter",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false
+    },
+    "bundle": {
+      "active": true,
+      "category": "Photography",
+      "copyright": "Clément 2000",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": [
+        "icons/icon.svg",
+        "icons/icon_16x16.png",
+        "icons/icon_32x32.png",
+        "icons/icon_48x48.png",
+        "icons/icon_128x128.png",
+        "icons/icon_256x256.png",
+        "icons/icon_512x512.png",
+        "icons/icon_1024x1024.png",
+        "icons/icons.icns",
+        "icons/icons.ico"
+      ],
+      "identifier": "com.clement-2000.dev",
+      "longDescription": "Photo Sorter is a tool that will help you organise and sort your picures. It has a few different features, such as filers, a map, a visualizer and a labeling system",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "Photo Sorter is a tool that will help you organise and sort your picures.",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 600,
+        "resizable": true,
+        "title": "Photo Sorter",
+        "width": 800
+      }
+    ]
+  }
+}
