@@ -24,7 +24,7 @@
     --dark-1: #212121;
     --dark-2: #282828;
     --color-0: #fc00a7;
-    --color-1: #fc00a7;
+    --color-1: #e700f3;
     --bright: whitesmoke;
 }
 
@@ -53,8 +53,9 @@ img {
 
 .header {
     background-color: var(--dark-0);
-    display: grid;
-    grid-template-columns: 200px 3fr minmax(350px, 2fr);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 10px;
     box-shadow: 0 0 5px #000000;
     z-index: 1;
@@ -76,16 +77,39 @@ img {
 }
 
 .header .modes .mode, .header .options .option {
-    margin: 0 10px;
-    padding: 5px;
+    margin: 0 5px;
+    padding: 5px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    min-width: 100px;
+    text-align: center;
+    
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.header .modes .mode:hover, .header .options .option:hover {
+    background: var(--color-0);
+}
+
+.header .modes .mode:active, .header .options .option:active {
+    background: var(--color-1);
+}
+
+.modes .active {
+    border: var(--color-0) solid 1px;
 }
 
 .content {
     display: grid;
-    grid-template-columns: 200px 3fr minmax(350px, 2fr);
+    grid-template-columns: 2fr minmax(380px, 1fr);
 }
 
-.content .explorer, .content .info {
+.content .info {
     background: var(--dark-2);
     box-shadow: 0 0 5px #00000080;
 }
@@ -132,7 +156,7 @@ img {
 .details {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 320px;
+    width: 330px;
     padding: 10px;
 }
 
@@ -141,10 +165,19 @@ img {
     display: grid;
     grid-template-columns: 24px auto;
     padding: 5px;
+    border-radius: 5px;
+}
+
+.detail:hover {
+    background: #ffffff20;
 }
 
 .long-detail {
     grid-column: span 2;
+}
+
+.detail .parameter {
+    width: 24px;
 }
 
 .detail .parameter img {
@@ -154,7 +187,12 @@ img {
 .detail .value {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    margin-left: 10px;
+}
+
+.details-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
